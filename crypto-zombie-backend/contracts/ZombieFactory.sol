@@ -37,7 +37,7 @@ contract ZombieFactory is Ownable {
     }
 
     function _generateRandomDna(string memory _str) private view returns (uint256) {
-        uint256 rand = uint256(keccak256(_str));
+        uint256 rand = uint256(keccak256(abi.encode(_str)));
         return rand % dnaModulus;
     }
 
