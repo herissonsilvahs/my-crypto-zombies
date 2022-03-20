@@ -33,7 +33,7 @@ contract ZombieFactory is Ownable {
       uint256 id = zombies.length - 1;
       zombieToOwner[id] = msg.sender;
       ownerZombieCount[msg.sender] = ownerZombieCount[msg.sender].add(1);
-      NewZombie(id, _name, _dna);
+      emit NewZombie(id, _name, _dna);
     }
 
     function _generateRandomDna(string memory _str) private view returns (uint256) {
