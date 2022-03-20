@@ -2,7 +2,7 @@
 pragma solidity ^0.8.12;
 
 import './ZombieAttack.sol';
-import 'erc721.sol';
+import './ERC721.sol';
 
 /// @title Um contrato que gerencia a transferência de propriedade do zumbi
 /// @author Herisson Silva
